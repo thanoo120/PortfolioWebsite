@@ -48,6 +48,6 @@ document.getElementById("projectFilter").dispatchEvent(new Event("change"));
 
   
 function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
+    const navLinks = document.getElementById("nav-links");
     navLinks.classList.toggle("show");
   }

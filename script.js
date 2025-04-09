@@ -123,6 +123,6 @@ window.onload = typeEffect;
 
   
 function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
+    const navLinks = document.getElementById("nav-links");
     navLinks.classList.toggle("show");
   }
