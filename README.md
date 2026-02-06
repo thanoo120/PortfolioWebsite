@@ -1,39 +1,82 @@
-# 🎨 My Personal Portfolio
+# Portfolio Website - React & Tailwind CSS
 
-## 📌 Project Description
+A modern, responsive portfolio website built with React and Tailwind CSS.
 
-This is my personal portfolio website developed for the SENG31313-2025 course module. It’s a clean, modern, and fully responsive site built using HTML, CSS, JavaScript, and Bootstrap. The goal is to showcase my personal projects, skills, and contact details with smooth animations and a user-friendly layout.
-The design emphasizes simplicity and clarity, making it easy for visitors to navigate and explore my work.
+## Features
 
-## Technologies && Libraries Used
- HTML5 – Semantic structure of the website
+- 🎨 Modern and attractive UI design
+- 📱 Fully responsive (mobile, tablet, desktop)
+- ⚡ Fast and optimized performance
+- 🎭 Smooth animations and transitions
+- 🧭 React Router for navigation
+- 💼 Showcase projects, skills, and experience
+- 📧 Contact form integration
 
-CSS3 – Styling and responsive design
+## Getting Started
 
-JavaScript – Interactive behavior and animations
+### Prerequisites
 
-Bootstrap 5 – Responsive layout and components
+- Node.js (v14 or higher)
+- npm or yarn
 
-## 🚀 Live Hosted Link
+### Installation
 
-🔗 [Live Demo](https://portfolio-website-rho-three-51.vercel.app/)
+1. Install dependencies:
+```bash
+npm install
+```
 
-## 🏗️ How to Run the Project Locally
+2. Start the development server:
+```bash
+npm start
+```
 
-### Prerequisites:
+The app will open at [http://localhost:3000](http://localhost:3000)
 
-- Ensure you have a modern web browser (e.g., Google Chrome, Firefox, Safari, etc.).
-- Git should be installed on your machine for cloning the repository.
+### Build for Production
 
-### Steps to Run Locally:
+```bash
+npm run build
+```
 
-1. **Clone the repository**:
-   To download the project to your local machine, use the following command in your terminal:
+This creates an optimized production build in the `build` folder.
 
-   ```bash
-   git clone https://github.com/dasaCoder/SENG31313-2025.git
+## Project Structure
 
-   2. Navigate to your folder:
-   cd SENG31313-2025/SE_2021_005
+```
+src/
+├── components/       # Reusable components
+│   ├── Navbar.js
+│   ├── Footer.js
+│   └── TypingEffect.js
+├── pages/           # Page components
+│   ├── Home.js
+│   ├── About.js
+│   ├── Projects.js
+│   └── Contact.js
+├── App.js           # Main app component
+├── index.js         # Entry point
+└── index.css        # Global styles
 
-2. Open `index.html` in your browser
+public/
+├── index.html
+└── [images and assets]
+```
+
+## Technologies Used
+
+- React 18
+- React Router DOM
+- Tailwind CSS
+- Bootstrap Icons
+
+## Customization
+
+- Update personal information in the respective page components
+- Modify colors in `tailwind.config.js`
+- Add/remove projects in `src/pages/Projects.js`
+- Update contact form endpoint in `src/pages/Contact.js`
+
+## License
+
+© 2025 Thanoogithan. All rights reserved.
