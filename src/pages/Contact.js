@@ -57,23 +57,23 @@ const Contact = () => {
   ];
 
   return (
-    <div className="pl-20 min-h-screen relative z-10">
-      <section className="px-6 sm:px-12 lg:px-20 py-32">
+    <div className="lg:pl-24 pt-16 lg:pt-0 min-h-screen relative z-10">
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32">
         {/* Header */}
-        <div className="max-w-7xl mx-auto mb-20 animate-slide-down">
+        <div className="max-w-7xl mx-auto mb-12 lg:mb-16 animate-slide-down">
           <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20 mb-6">
             <span className="text-primary text-sm font-medium">Get In Touch</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black gradient-text mb-6">Let's Work Together</h1>
-          <p className="text-xl text-gray-300 max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">Let's Work Together</h1>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl">
             Have a project in mind? I'd love to hear about it. Let's create something amazing together.
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
-          <div className="space-y-8 animate-slide-left">
-            <div className="glass rounded-2xl p-8 border border-primary/20">
+          <div className="space-y-6 animate-slide-left">
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20">
               <h2 className="text-2xl font-bold gradient-text mb-8">Contact Information</h2>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -84,11 +84,11 @@ const Contact = () => {
                     <div className="flex-1">
                       <p className="text-gray-400 text-sm mb-1">{info.label}</p>
                       {info.link ? (
-                        <a href={info.link} className="text-white text-lg font-semibold group-hover:text-primary transition-colors">
+                        <a href={info.link} className="text-white text-base sm:text-lg font-semibold group-hover:text-primary transition-colors">
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-white text-lg font-semibold">{info.value}</p>
+                        <p className="text-white text-base sm:text-lg font-semibold">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -97,7 +97,7 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="glass rounded-2xl p-8 border border-primary/20">
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20">
               <h2 className="text-2xl font-bold gradient-text mb-6">Follow Me</h2>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
@@ -118,7 +118,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-slide-right">
-            <div className="glass rounded-2xl p-8 border border-primary/20">
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20">
               <h2 className="text-2xl font-bold gradient-text mb-8">Send a Message</h2>
               <form
                 id="contactForm"

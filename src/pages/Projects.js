@@ -59,15 +59,15 @@ const Projects = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <div className="pl-20 min-h-screen relative z-10">
-      <section className="px-6 sm:px-12 lg:px-20 py-32">
+    <div className="lg:pl-24 pt-16 lg:pt-0 min-h-screen relative z-10">
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32">
         {/* Header */}
-        <div className="max-w-7xl mx-auto mb-16 animate-slide-down">
+        <div className="max-w-7xl mx-auto mb-12 lg:mb-16 animate-slide-down">
           <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20 mb-6">
             <span className="text-primary text-sm font-medium">Portfolio</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black gradient-text mb-6">My Projects</h1>
-          <p className="text-xl text-gray-300 max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">My Projects</h1>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl">
             A collection of projects showcasing my skills and experience in software development
           </p>
         </div>
@@ -93,14 +93,14 @@ const Projects = () => {
 
         {/* Projects Grid - Masonry Style */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
               <a
                 key={index}
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group glass rounded-2xl p-8 border border-primary/20 hover:border-primary/50 transition-all duration-500 cursor-pointer overflow-hidden animate-slide-up ${
+                className={`group glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-500 cursor-pointer overflow-hidden animate-slide-up ${
                   index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -115,7 +115,7 @@ const Projects = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
                     {project.name}
                   </h3>
                   

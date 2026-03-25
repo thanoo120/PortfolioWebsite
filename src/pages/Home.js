@@ -16,40 +16,40 @@ const Home = () => {
   const roles = ['Full Stack Developer', 'Mobile Developer', 'ML Enthusiast'];
 
   return (
-    <div className="pl-20 relative z-10">
+    <div className="lg:pl-24 pt-16 lg:pt-0 relative z-10">
       {/* Split Screen Hero Section */}
-      <section className="min-h-screen flex relative overflow-hidden">
+      <section className="min-h-screen flex flex-col lg:flex-row relative overflow-hidden">
         {/* Left Side - Content */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-12 lg:px-20 py-20 relative z-10">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32 relative z-10">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20 mb-8 animate-slide-down">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
               <span className="text-primary text-sm font-medium">Available for opportunities</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight animate-slide-right">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight animate-slide-right">
               <span className="text-white">Hello,</span>
               <br />
               <span className="gradient-text">I'm Thanoogithan</span>
             </h1>
 
-            <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-gray-300 animate-slide-right" style={{ animationDelay: '0.2s' }}>
+            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-gray-300 animate-slide-right" style={{ animationDelay: '0.2s' }}>
               <span className="gradient-text">
                 <TypingEffect words={roles} />
               </span>
             </div>
 
-            <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed animate-slide-right" style={{ animationDelay: '0.4s' }}>
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 mb-10 leading-relaxed animate-slide-right" style={{ animationDelay: '0.4s' }}>
               Passionate about creating innovative solutions and bringing ideas to life through code.
               I specialize in building scalable applications and exploring the world of machine learning.
             </p>
 
-            <div className="flex flex-wrap gap-4 animate-slide-right" style={{ animationDelay: '0.6s' }}>
+            <div className="flex flex-wrap gap-4 mb-12 animate-slide-right" style={{ animationDelay: '0.6s' }}>
               <a
                 href="/ThanooCV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative px-8 py-4 bg-gradient-to-r from-primary to-secondary text-dark font-bold rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/50"
+                className="group relative px-6 sm:px-8 py-4 bg-gradient-to-r from-primary to-secondary text-dark font-bold rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/50"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Download CV
@@ -59,22 +59,22 @@ const Home = () => {
               </a>
               <Link
                 to="/contact"
-                className="px-8 py-4 border-2 border-primary/50 text-primary font-bold rounded-xl hover:bg-primary/10 transition-all duration-300 transform hover:scale-105"
+                className="px-6 sm:px-8 py-4 border-2 border-primary/50 text-primary font-bold rounded-xl hover:bg-primary/10 transition-all duration-300 transform hover:scale-105"
               >
                 Let's Talk
               </Link>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-16 animate-slide-up" style={{ animationDelay: '0.8s' }}>
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 animate-slide-up" style={{ animationDelay: '0.8s' }}>
               {[
                 { number: '3+', label: 'Years Experience' },
                 { number: '10+', label: 'Projects Done' },
                 { number: '100%', label: 'Dedication' },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold gradient-text mb-1">{stat.number}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">{stat.number}</div>
+                  <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -82,7 +82,7 @@ const Home = () => {
         </div>
 
         {/* Right Side - Image */}
-        <div className="hidden lg:flex w-1/2 relative items-center justify-center p-20">
+        <div className="hidden lg:flex w-1/2 relative items-center justify-center p-12 xl:p-20">
           <div className="relative w-full max-w-lg">
             {/* Animated gradient background */}
             <div 
@@ -108,9 +108,9 @@ const Home = () => {
       </section>
 
       {/* About Section - Asymmetric Layout */}
-      <section className="px-6 sm:px-12 lg:px-20 py-32 relative">
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 animate-slide-left">
               <div className="relative group">
@@ -128,13 +128,13 @@ const Home = () => {
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20">
                 <span className="text-primary text-sm font-medium">About Me</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold gradient-text">Creative Developer & Problem Solver</h2>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text">Creative Developer & Problem Solver</h2>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                 I am Thanoogithan, a passionate Full Stack Developer & ML Enthusiast currently pursuing
                 a Software Engineering Degree at the University of Kelaniya. I specialize in Java, Spring Boot,
                 React, JavaScript, and Mobile App Development.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                 I am a good problem solver and I always like to do error fixing. Error fixing is one of the
                 interesting things and it helps me to grow my knowledge. I like to learn new things and use
                 them in my activities.
@@ -152,18 +152,18 @@ const Home = () => {
       </section>
 
       {/* Skills Section - Modern Grid */}
-      <section className="px-6 sm:px-12 lg:px-20 py-32 relative">
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-slide-down">
+          <div className="text-center mb-12 lg:mb-16 animate-slide-down">
             <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20 mb-4">
               <span className="text-primary text-sm font-medium">Skills</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Technologies I Work With</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">Technologies I Work With</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Programming Skills */}
-            <div className="glass rounded-2xl p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up">
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up">
               <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4">
                 <i className="bi bi-code-slash text-2xl text-primary"></i>
               </div>
@@ -178,7 +178,7 @@ const Home = () => {
             </div>
 
             {/* Web Development */}
-            <div className="glass rounded-2xl p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4">
                 <i className="bi bi-globe text-2xl text-primary"></i>
               </div>
@@ -193,7 +193,7 @@ const Home = () => {
             </div>
 
             {/* Mobile & Database */}
-            <div className="glass rounded-2xl p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up sm:col-span-2 lg:col-span-1" style={{ animationDelay: '0.2s' }}>
               <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4">
                 <i className="bi bi-phone text-2xl text-primary"></i>
               </div>
@@ -209,7 +209,7 @@ const Home = () => {
           </div>
 
           {/* Languages */}
-          <div className="glass rounded-2xl p-8 border border-primary/20 animate-slide-up">
+          <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 animate-slide-up">
             <h3 className="text-2xl font-bold gradient-text mb-6">Languages</h3>
             <div className="space-y-4">
               {[
@@ -236,26 +236,26 @@ const Home = () => {
       </section>
 
       {/* Education Section */}
-      <section className="px-6 sm:px-12 lg:px-20 py-32 relative">
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-slide-down">
+          <div className="text-center mb-12 lg:mb-16 animate-slide-down">
             <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20 mb-4">
               <span className="text-primary text-sm font-medium">Education</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text">My Journey</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text">My Journey</h2>
           </div>
 
-          <div className="relative">
+          <div className="relative max-w-4xl mx-auto">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
+            <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
 
             <div className="space-y-12">
               {[
                 { name: 'J/Vayavilan Central College', period: '2007-2020', icon: 'bi-mortarboard' },
                 { name: 'University of Kelaniya', period: '2023-2027', desc: 'B.Sc (Hons) Software Engineering', icon: 'bi-university' },
               ].map((edu, index) => (
-                <div key={index} className="relative pl-20 animate-slide-right" style={{ animationDelay: `${index * 0.2}s` }}>
-                  <div className="absolute left-4 top-2 w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center border-4 border-dark">
+                <div key={index} className="relative pl-12 sm:pl-20 animate-slide-right" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center border-4 border-dark">
                     <i className={`bi ${edu.icon} text-white text-sm`}></i>
                   </div>
                   <div className="glass rounded-2xl p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
@@ -271,25 +271,25 @@ const Home = () => {
       </section>
 
       {/* Projects Preview - Masonry Style */}
-      <section className="px-6 sm:px-12 lg:px-20 py-32 relative">
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-16 animate-slide-down">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 lg:mb-16 animate-slide-down">
             <div>
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20 mb-4">
                 <span className="text-primary text-sm font-medium">Projects</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold gradient-text">Featured Work</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text">Featured Work</h2>
             </div>
             <Link
               to="/projects"
-              className="hidden md:flex items-center gap-2 px-6 py-3 border border-primary/50 text-primary rounded-xl hover:bg-primary/10 transition-all duration-300"
+              className="mt-4 sm:mt-0 flex items-center gap-2 px-6 py-3 border border-primary/50 text-primary rounded-xl hover:bg-primary/10 transition-all duration-300"
             >
               View All
               <i className="bi bi-arrow-right"></i>
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { name: 'Fuel Quota Management', category: 'Spring Boot', size: 'lg:col-span-2' },
               { name: 'Traffic Management', category: 'Spring Boot' },
@@ -297,7 +297,7 @@ const Home = () => {
             ].map((project, index) => (
               <div
                 key={index}
-                className={`glass rounded-2xl p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 group cursor-pointer animate-slide-up ${project.size || ''}`}
+                className={`glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 group cursor-pointer animate-slide-up ${project.size || ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">

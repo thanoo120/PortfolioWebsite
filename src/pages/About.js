@@ -2,23 +2,23 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="pl-20 min-h-screen relative z-10">
-      <section className="px-6 sm:px-12 lg:px-20 py-32">
+    <div className="lg:pl-24 pt-16 lg:pt-0 min-h-screen relative z-10">
+      <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32">
         {/* Hero Section */}
-        <div className="max-w-4xl mx-auto mb-20 animate-slide-down">
+        <div className="max-w-4xl mx-auto mb-16 lg:mb-20 animate-slide-down">
           <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20 mb-6">
             <span className="text-primary text-sm font-medium">About</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black gradient-text mb-6">About Me</h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">About Me</h1>
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
             I am Thanoogithan, a passionate Full Stack Developer & ML Enthusiast currently pursuing
             a Software Engineering Degree at the University of Kelaniya.
           </p>
         </div>
 
         {/* Profile Section */}
-        <div className="max-w-7xl mx-auto mb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto mb-16 lg:mb-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="animate-slide-left">
               <div className="relative group">
                 <div className="absolute -inset-6 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
@@ -30,13 +30,13 @@ const About = () => {
               </div>
             </div>
             <div className="space-y-6 animate-slide-right">
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text">Full Stack Developer & ML Enthusiast</h2>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <h2 className="text-3xl sm:text-4xl font-bold gradient-text">Full Stack Developer & ML Enthusiast</h2>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                 I specialize in Java, Spring Boot, React, JavaScript, and Mobile App Development.
                 I am a good problem solver and I always like to do error fixing. Error fixing is one of the
                 interesting things and it helps me to grow my knowledge.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                 I like to learn new things and use them in my activities. My passion for technology drives me
                 to continuously improve and explore new possibilities in software development.
               </p>
@@ -56,19 +56,19 @@ const About = () => {
         </div>
 
         {/* Education Timeline */}
-        <div className="max-w-4xl mx-auto mb-20">
+        <div className="max-w-4xl mx-auto mb-16 lg:mb-20">
           <div className="text-center mb-12 animate-slide-down">
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text">Education</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text">Education</h2>
           </div>
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
+            <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent"></div>
             <div className="space-y-12">
               {[
                 { name: 'J/Vayavilan Central College', period: '2007-2020', icon: 'bi-mortarboard' },
                 { name: 'University of Kelaniya', period: '2023-2027', desc: 'B.Sc (Hons) Software Engineering', icon: 'bi-university' },
               ].map((edu, index) => (
-                <div key={index} className="relative pl-20 animate-slide-right" style={{ animationDelay: `${index * 0.2}s` }}>
-                  <div className="absolute left-4 top-2 w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center border-4 border-dark">
+                <div key={index} className="relative pl-12 sm:pl-20 animate-slide-right" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="absolute left-0 sm:left-4 top-2 w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center border-4 border-dark">
                     <i className={`bi ${edu.icon} text-white text-sm`}></i>
                   </div>
                   <div className="glass rounded-2xl p-6 border border-primary/20 hover:border-primary/50 transition-all duration-300">
@@ -83,12 +83,12 @@ const About = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="max-w-7xl mx-auto mb-20">
+        <div className="max-w-7xl mx-auto mb-16 lg:mb-20">
           <div className="text-center mb-12 animate-slide-down">
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Skills & Expertise</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">Skills & Expertise</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="glass rounded-2xl p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up">
               <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4">
                 <i className="bi bi-code-slash text-2xl text-primary"></i>
               </div>
@@ -101,7 +101,7 @@ const About = () => {
                 ))}
               </div>
             </div>
-            <div className="glass rounded-2xl p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4">
                 <i className="bi bi-globe text-2xl text-primary"></i>
               </div>
@@ -114,7 +114,7 @@ const About = () => {
                 ))}
               </div>
             </div>
-            <div className="glass rounded-2xl p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-300 animate-slide-up sm:col-span-2 lg:col-span-1" style={{ animationDelay: '0.2s' }}>
               <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mb-4">
                 <i className="bi bi-phone text-2xl text-primary"></i>
               </div>
@@ -130,7 +130,7 @@ const About = () => {
           </div>
 
           {/* Soft Skills */}
-          <div className="glass rounded-2xl p-8 border border-primary/20 animate-slide-up">
+          <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 animate-slide-up">
             <h3 className="text-2xl font-bold gradient-text mb-6 flex items-center gap-3">
               <i className="bi bi-people"></i>
               Soft Skills
@@ -148,9 +148,9 @@ const About = () => {
         {/* Languages */}
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-slide-down">
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text">Languages</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text">Languages</h2>
           </div>
-          <div className="glass rounded-2xl p-8 border border-primary/20 animate-slide-up">
+          <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20 animate-slide-up">
             <div className="space-y-6">
               {[
                 { name: 'Tamil', level: 100 },
