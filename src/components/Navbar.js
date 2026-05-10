@@ -1,142 +1,109 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from 'react-icons/fi';
+import { Link as ScrollLink } from 'react-scroll';
+import { navItems, portfolioOwner } from '../data/portfolioData';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location]);
-
-  const isActive = (path) => location.pathname === path;
-
-  const navItems = [
-    { path: '/', label: 'Home', icon: 'bi-house' },
-    { path: '/about', label: 'About', icon: 'bi-person' },
-    { path: '/projects', label: 'Projects', icon: 'bi-folder' },
-    { path: '/contact', label: 'Contact', icon: 'bi-envelope' },
+  const socialLinks = [
+    { href: portfolioOwner.github, icon: FiGithub, label: 'GitHub' },
+    { href: portfolioOwner.linkedin, icon: FiLinkedin, label: 'LinkedIn' },
+    { href: `mailto:${portfolioOwner.email}`, icon: FiMail, label: 'Email' },
   ];
 
   return (
     <>
-      {/* Desktop Sidebar Navigation */}
-      <nav className={`hidden lg:flex fixed left-0 top-0 h-full w-24 z-50 transition-all duration-300 ${scrolled ? 'bg-darkNav/95 backdrop-blur-md border-r border-primary/10' : 'bg-transparent'}`}>
-        <div className="flex flex-col items-center h-full py-6 px-3">
-          {/* Logo */}
-          <Link to="/" className="mb-10 group">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary via-accent to-secondary rounded-2xl flex items-center justify-center transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-primary/30">
-              <span className="text-dark font-bold text-xl">T</span>
-            </div>
-          </Link>
+      <nav className="fixed left-0 right-0 top-0 z-50 border-b border-cyan-300/10 bg-slate-950/70 backdrop-blur-xl">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          <ScrollLink
+            to="home"
+            smooth
+            offset={-90}
+            duration={550}
+            className="cursor-pointer bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-lg font-bold text-transparent"
+          >
+            ST.Dev
+          </ScrollLink>
 
-          {/* Navigation Items */}
-          <div className="flex flex-col gap-4 flex-1">
+          <div className="hidden items-center gap-2 md:flex">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`group relative flex flex-col items-center justify-center w-14 h-14 rounded-xl transition-all duration-300 ${
-                  isActive(item.path)
-                    ? 'bg-gradient-to-br from-primary/30 to-secondary/30 text-primary'
-                    : 'text-gray-400 hover:text-primary hover:bg-darkCard/50'
-                }`}
-                title={item.label}
+              <ScrollLink
+                key={item.id}
+                to={item.id}
+                smooth
+                spy
+                offset={-90}
+                duration={500}
+                activeClass="text-cyan-300 border-cyan-300/50 bg-slate-800/70"
+                className="rounded-xl border border-transparent px-3 py-2 text-sm font-medium text-slate-300 transition hover:border-cyan-400/20 hover:bg-slate-800/60 hover:text-cyan-300"
               >
-                <i className={`bi ${item.icon} text-xl`}></i>
-                {isActive(item.path) && (
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-10 bg-gradient-to-b from-primary to-secondary rounded-r-full"></div>
-                )}
-              </Link>
+                {item.label}
+              </ScrollLink>
             ))}
           </div>
 
-          {/* Social Links */}
-          <div className="flex flex-col gap-3">
-            <a
-              href="https://www.linkedin.com/in/sanmugarasa-thanoogithan-923a70280/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center rounded-xl text-gray-400 hover:text-primary hover:bg-darkCard/50 transition-all duration-300 transform hover:scale-110"
-            >
-              <i className="bi bi-linkedin text-lg"></i>
-            </a>
-            <a
-              href="https://github.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center rounded-xl text-gray-400 hover:text-primary hover:bg-darkCard/50 transition-all duration-300 transform hover:scale-110"
-            >
-              <i className="bi bi-github text-lg"></i>
-            </a>
+          <div className="hidden items-center gap-2 md:flex">
+            {socialLinks.map((item) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-lg border border-cyan-300/20 bg-slate-900/50 p-2.5 text-slate-300 transition hover:-translate-y-0.5 hover:border-cyan-300/50 hover:text-cyan-300"
+                  aria-label={item.label}
+                >
+                  <Icon size={17} />
+                </a>
+              );
+            })}
           </div>
-        </div>
-      </nav>
 
-      {/* Mobile Top Navigation */}
-      <nav className="lg:hidden fixed top-0 left-0 right-0 z-50 glass border-b border-primary/10">
-        <div className="flex items-center justify-between px-4 py-4">
-          <Link to="/" className="group">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary via-accent to-secondary rounded-xl flex items-center justify-center transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 shadow-lg shadow-primary/30">
-              <span className="text-dark font-bold">T</span>
-            </div>
-          </Link>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="w-12 h-12 glass rounded-xl flex items-center justify-center text-white"
+            className="rounded-xl border border-cyan-300/30 bg-slate-900/60 p-3 text-white md:hidden"
           >
-            <i className={`bi ${isMenuOpen ? 'bi-x-lg' : 'bi-list'} text-xl`}></i>
+            {isMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40">
-          <div className="absolute inset-0 bg-dark/95 backdrop-blur-md" onClick={() => setIsMenuOpen(false)}></div>
-          <div className="absolute right-0 top-0 h-full w-72 glass border-l border-primary/20 p-8">
-            <div className="flex flex-col gap-4 mt-24">
+        <div className="fixed inset-0 z-40 md:hidden">
+          <div className="absolute inset-0 bg-slate-950/80" onClick={() => setIsMenuOpen(false)} />
+          <div className="absolute right-0 top-0 h-full w-72 border-l border-cyan-300/20 bg-slate-950/90 p-6 pt-24 backdrop-blur-xl">
+            <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
+                <ScrollLink
+                  key={item.id}
+                  to={item.id}
+                  smooth
+                  spy
+                  offset={-80}
+                  duration={500}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center gap-4 px-6 py-4 rounded-xl transition-all duration-300 ${
-                    isActive(item.path)
-                      ? 'bg-gradient-to-r from-primary/20 to-secondary/20 text-primary border border-primary/30'
-                      : 'text-gray-300 hover:text-primary hover:bg-darkCard/50'
-                  }`}
+                  activeClass="text-cyan-300 border-cyan-300/50 bg-slate-800/70"
+                  className="rounded-xl border border-transparent px-4 py-3 text-base font-semibold text-slate-300 transition hover:border-cyan-300/40 hover:bg-slate-800/70 hover:text-cyan-300"
                 >
-                  <i className={`bi ${item.icon} text-xl`}></i>
-                  <span className="font-semibold text-lg">{item.label}</span>
-                </Link>
+                  {item.label}
+                </ScrollLink>
               ))}
-              <div className="flex gap-4 mt-8 pt-8 border-t border-primary/20">
-                <a
-                  href="https://www.linkedin.com/in/sanmugarasa-thanoogithan-923a70280/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-xl glass border border-primary/20 text-gray-300 hover:text-primary hover:border-primary/50 transition-all duration-300"
-                >
-                  <i className="bi bi-linkedin text-xl"></i>
-                </a>
-                <a
-                  href="https://github.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-xl glass border border-primary/20 text-gray-300 hover:text-primary hover:border-primary/50 transition-all duration-300"
-                >
-                  <i className="bi bi-github text-xl"></i>
-                </a>
+              <div className="mt-6 flex gap-3 border-t border-cyan-300/20 pt-6">
+                {socialLinks.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-lg border border-cyan-300/20 bg-slate-900/50 p-2.5 text-slate-300 transition hover:border-cyan-300/50 hover:text-cyan-300"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>

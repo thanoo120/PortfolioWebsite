@@ -40,7 +40,7 @@ const AnimatedBackground = () => {
       }
 
       draw() {
-        ctx.fillStyle = `rgba(0, 217, 255, ${this.opacity})`;
+        ctx.fillStyle = `rgba(56, 189, 248, ${this.opacity})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -69,8 +69,8 @@ const AnimatedBackground = () => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 120) {
-            ctx.strokeStyle = `rgba(0, 217, 255, ${0.1 * (1 - distance / 120)})`;
+          if (distance < 130) {
+            ctx.strokeStyle = `rgba(99, 102, 241, ${0.13 * (1 - distance / 130)})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -92,11 +92,14 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }}
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        className="fixed left-0 top-0 z-0 h-full w-full pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse at top, #1e293b 0%, #0f172a 45%, #020617 100%)' }}
+      />
+      <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_20%_20%,rgba(6,182,212,0.12),transparent_30%),radial-gradient(circle_at_80%_30%,rgba(99,102,241,0.14),transparent_32%),radial-gradient(circle_at_50%_80%,rgba(168,85,247,0.10),transparent_34%)]" />
+    </>
   );
 };
 

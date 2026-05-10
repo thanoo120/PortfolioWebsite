@@ -1,8 +1,16 @@
 import React from 'react';
 
 const About = () => {
+  const programmingSkills = [
+    { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
+    { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'C', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
+    { name: 'C++', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
+    { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  ];
+
   return (
-    <div className="lg:pl-24 pt-16 lg:pt-0 min-h-screen relative z-10">
+    <div className="pt-20 min-h-screen relative z-10">
       <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32">
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto mb-16 lg:mb-20 animate-slide-down">
@@ -93,10 +101,11 @@ const About = () => {
                 <i className="bi bi-code-slash text-2xl text-primary"></i>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Programming</h3>
-              <div className="flex flex-wrap gap-2">
-                {['Java', 'Python', 'C', 'C++', 'JavaScript'].map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-gradient-to-r from-secondary/80 to-primary/80 rounded-lg text-sm text-white">
-                    {skill}
+              <div className="flex flex-wrap gap-3">
+                {programmingSkills.map((skill) => (
+                  <span key={skill.name} className="inline-flex items-center gap-2 px-3 py-1.5 bg-darkCard/70 rounded-lg text-sm text-white border border-primary/30">
+                    <img src={skill.icon} alt={skill.name} className="w-4 h-4" />
+                    {skill.name}
                   </span>
                 ))}
               </div>

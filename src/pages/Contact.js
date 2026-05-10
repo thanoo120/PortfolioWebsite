@@ -57,7 +57,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="lg:pl-24 pt-16 lg:pt-0 min-h-screen relative z-10">
+    <div className="pt-20 min-h-screen relative z-10">
       <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32">
         {/* Header */}
         <div className="max-w-7xl mx-auto mb-12 lg:mb-16 animate-slide-down">

@@ -59,7 +59,7 @@ const Projects = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <div className="lg:pl-24 pt-16 lg:pt-0 min-h-screen relative z-10">
+    <div className="pt-20 min-h-screen relative z-10">
       <section className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-20 lg:py-32">
         {/* Header */}
         <div className="max-w-7xl mx-auto mb-12 lg:mb-16 animate-slide-down">
@@ -91,7 +91,7 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Projects Grid - Masonry Style */}
+        {/* Projects Grid — uniform square cards */}
         <div className="max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
@@ -100,43 +100,37 @@ const Projects = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group glass rounded-2xl p-6 sm:p-8 border border-primary/20 hover:border-primary/50 transition-all duration-500 cursor-pointer overflow-hidden animate-slide-up ${
-                  index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''
-                }`}
+                className="group relative glass rounded-2xl p-6 sm:p-7 border border-primary/20 hover:border-primary/50 transition-all duration-500 cursor-pointer overflow-hidden animate-slide-up flex flex-col aspect-square"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-br ${project.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
-                    <i className={`bi ${project.icon} text-3xl text-white`}></i>
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`}></div>
+
+                <div className="relative z-10 flex flex-col h-full min-h-0">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center mb-4 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
+                    <i className={`bi ${project.icon} text-2xl text-white`}></i>
                   </div>
 
-                  {/* Content */}
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors line-clamp-2">
                     {project.name}
                   </h3>
-                  
-                  <p className="text-gray-400 mb-4 text-sm">
+
+                  <p className="text-gray-400 text-sm line-clamp-3 flex-1 min-h-0 mb-4">
                     {project.description}
                   </p>
 
-                  {/* Category Badge */}
-                  <div className="flex items-center justify-between">
-                    <span className="px-4 py-1.5 bg-gradient-to-r from-secondary/80 to-primary/80 rounded-lg text-sm text-white font-medium">
+                  <div className="flex items-center justify-between gap-2 mt-auto shrink-0">
+                    <span className="px-3 py-1 bg-gradient-to-r from-secondary/80 to-primary/80 rounded-lg text-xs sm:text-sm text-white font-medium truncate max-w-[50%]">
                       {project.category}
                     </span>
-                    <div className="flex items-center gap-2 text-primary group-hover:text-accent transition-colors">
+                    <div className="flex items-center gap-2 text-primary group-hover:text-accent transition-colors shrink-0">
                       <span className="text-sm font-semibold">View</span>
                       <i className="bi bi-arrow-right group-hover:translate-x-2 transition-transform"></i>
                     </div>
                   </div>
                 </div>
 
-                {/* Shine Effect */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"></div>
               </a>
             ))}
           </div>
