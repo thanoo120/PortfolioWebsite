@@ -120,6 +120,40 @@ export const experienceHighlights = [
   'Git-based team collaboration and code reviews',
 ];
 
+export const education = [
+  {
+    type: 'University',
+    institution: 'University of Kelaniya',
+    period: '2023 - Present',
+    initials: 'UOK',
+    image: '/image2.png',
+    details: 'B.Sc. (Hons) Software Engineering',
+    description: 'Pursuing degree in Software Engineering with focus on software architecture, distributed systems, and enterprise web development.',
+    roles: [
+      'Committee member of TSA',
+      'Web development team of TSA',
+      'Committee member of SESA',
+    ],
+  },
+  {
+    type: 'School',
+    institution: 'J/Vayavilan Central College',
+    period: '2007 - 2020',
+    initials: 'VCC',
+    icon: '🏫',
+    image: '/image.png',
+    details: 'Secondary and Primary Education',
+    description: 'Completed secondary and primary education with strong foundation in science and mathematics.',
+    roles: [
+      'President of mental health club',
+      'Vice president of science club',
+      'Member of English union',
+      'Province level poem winner',
+      'Science quiz competition province level',
+    ],
+  },
+];
+
 export const featuredProjects = [
   {
     name: 'E-Learning Platform',

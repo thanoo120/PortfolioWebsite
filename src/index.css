@@ -40,3 +40,24 @@ html {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
+
+/* Image Protection */
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: auto;
+}
+
+/* Prevent image saving on right-click */
+img::after {
+  content: '';
+  display: block;
+}
+
+/* Disable text selection on images */
+img {
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
