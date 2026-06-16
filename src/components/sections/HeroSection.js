@@ -20,14 +20,14 @@ const floatingTech = [
 
 const HeroSection = () => {
   return (
-    <SectionWrapper id="home" className="relative overflow-hidden pt-32 lg:pt-36">
-      <div className="grid items-center gap-10 lg:gap-40 lg:grid-cols-2">
+    <SectionWrapper id="home" className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-36">
+      <div className="grid items-center gap-10 lg:gap-20 xl:gap-40 lg:grid-cols-2">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex rounded-full border border-cyan-300/40 bg-slate-900/70 px-4 py-1 text-base text-cyan-300"
+            className="inline-flex rounded-full border border-cyan-300/40 bg-slate-900/70 px-3 py-1 text-sm text-cyan-300"
           >
             Available for software engineering opportunities
           </motion.p>
@@ -35,7 +35,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-6 text-5xl font-black leading-tight text-white sm:text-6xl lg:text-7xl"
+            className="mt-6 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
           >
             {portfolioOwner.name}
           </motion.h1>
@@ -108,13 +108,13 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        <div className="relative">
-          <div className="rounded-3xl border border-cyan-300/20 bg-slate-900/50 p-8 shadow-[0_0_50px_rgba(34,211,238,0.13)] backdrop-blur-xl">
+        <div className="relative mt-4 lg:mt-0">
+          <div className="rounded-3xl border border-cyan-300/20 bg-slate-900/50 p-4 sm:p-8 shadow-[0_0_50px_rgba(34,211,238,0.13)] backdrop-blur-xl">
             <div className="mb-5 overflow-hidden rounded-2xl border border-cyan-300/30 bg-slate-800/70">
               <img
                 src={profilePhoto}
                 alt="Sanmugarasa Thanoogithan"
-                className="h-[576px] w-full object-cover object-top sm:h-[640px]"
+                className="h-[280px] w-full object-cover object-top sm:h-[420px] lg:h-[520px] xl:h-[576px]"
               />
             </div>
           </div>
@@ -126,7 +126,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, scale: 0.6 }}
                 animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
                 transition={{ duration: 3.8, repeat: Infinity, delay: item.delay }}
-                className={`absolute ${item.className} rounded-xl border border-cyan-300/30 bg-slate-900/70 p-2.5 text-cyan-300 shadow-[0_0_25px_rgba(34,211,238,0.25)] backdrop-blur-xl`}
+                className={`absolute ${item.className} hidden sm:flex rounded-xl border border-cyan-300/30 bg-slate-900/70 p-2.5 text-cyan-300 shadow-[0_0_25px_rgba(34,211,238,0.25)] backdrop-blur-xl`}
               >
                 <Icon size={18} />
               </motion.div>

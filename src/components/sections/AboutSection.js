@@ -283,7 +283,7 @@ const AboutSection = () => {
         <span className="inline-block rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-cyan-400">
           About Me
         </span>
-        <h2 className="mt-4 text-4xl font-bold text-white">Engineering mindset with product focus</h2>
+        <h2 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold text-white">Engineering mindset with product focus</h2>
         <p className="mt-2 text-slate-400">{portfolioOwner.role}</p>
       </div>
 
@@ -304,7 +304,7 @@ const AboutSection = () => {
         </div>
 
         {/* body */}
-        <div className="flex" style={{ minHeight: '540px' }}>
+        <div className="flex" style={{ minHeight: 'clamp(320px, 60vw, 540px)' }}>
 
           {/* ── file explorer sidebar ── */}
           <div className="hidden w-44 flex-shrink-0 border-r border-slate-700/50 bg-[#181825] md:block">
@@ -350,7 +350,7 @@ const AboutSection = () => {
             </div>
 
             {/* split: code (left) | terminal (right) */}
-            <div className="flex flex-1 min-h-0" style={{ height: '480px' }}>
+            <div className="flex flex-1 min-h-0" style={{ height: 'clamp(280px, 55vw, 480px)' }}>
 
               {/* code editor */}
               <div className="flex-1 overflow-auto p-5 min-w-0 border-r border-slate-700/40">
@@ -370,7 +370,7 @@ const AboutSection = () => {
               </div>
 
               {/* typing terminal */}
-              <div className="w-80 flex-shrink-0 xl:w-96 overflow-hidden">
+              <div className="hidden md:block w-64 lg:w-80 flex-shrink-0 xl:w-96 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeTab}

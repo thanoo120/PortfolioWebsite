@@ -31,7 +31,7 @@ const Navbar = () => {
                 offset={-90}
                 duration={500}
                 activeClass="text-cyan-300 border-cyan-300/50 bg-slate-800/70"
-                className="rounded-xl border border-transparent px-3 py-2 text-2xl font-medium text-slate-300 transition hover:border-cyan-400/20 hover:bg-slate-800/60 hover:text-cyan-300"
+                className="rounded-xl border border-transparent px-3 py-2 text-sm font-medium text-slate-300 transition hover:border-cyan-400/20 hover:bg-slate-800/60 hover:text-cyan-300"
               >
                 {item.label}
               </ScrollLink>
