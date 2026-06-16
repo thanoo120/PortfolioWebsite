@@ -11,6 +11,7 @@ import MediumSection from './components/sections/MediumSection';
 import TechMarquee from './components/sections/TechMarquee';
 import ContactSection from './components/sections/ContactSection';
 import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         </motion.main>
         <Footer />
       </div>
+      <Chatbot />
     </div>
   );
 }
