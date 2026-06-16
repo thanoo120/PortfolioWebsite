@@ -1,14 +1,97 @@
-/**
- * Medium — set MEDIUM_USERNAME to your @handle (no @ prefix).
- * Latest posts load from Medium’s RSS via a public JSON API; if that fails,
- * MEDIUM_ARTICLES_FALLBACK is shown instead.
- */
-export const MEDIUM_USERNAME = 'thanoo120';
+export const MEDIUM_USERNAME = 'sanmugarasathaoogithan';
 
-/** Shown when the feed cannot be loaded. Add manual entries here if you prefer not to use RSS. */
-export const MEDIUM_ARTICLES_FALLBACK = [];
+export const MEDIUM_ARTICLES_FALLBACK = [
+  {
+    guid: 'article-1',
+    title: 'Building CI/CD pipelines with GitHub Actions: A practical Guide for Express.js',
+    link: 'https://medium.com/@sanmugarasathaoogithan/building-ci-cd-pipelines-with-github-actions-a-practical-guide-for-express-js-392945aea441',
+    pubDate: '2026-05-27T00:00:00.000Z',
+    categories: ['CI/CD', 'GitHub Actions', 'Express.js'],
+    description: 'A practical, hands-on guide to setting up continuous integration and deployment pipelines using GitHub Actions for an Express.js application.',
+    thumbnail: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-2',
+    title: "Why computers can't just talk to each other — and how marshalling fixes that",
+    link: 'https://medium.com/@sanmugarasathaoogithan/why-computers-cant-just-talk-to-each-other-and-how-marshalling-fixes-that-5dd047a8a9fb',
+    pubDate: '2026-05-12T00:00:00.000Z',
+    categories: ['Distributed Systems', 'Networking', 'Software Engineering'],
+    description: 'An exploration of why data serialisation and marshalling are fundamental to distributed computing and cross-platform communication.',
+    thumbnail: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-3',
+    title: 'Old Code, New Tricks: A Guide to Software Reengineering',
+    link: 'https://medium.com/@sanmugarasathaoogithan/old-code-new-tricks-a-guide-to-software-reengineering-c6c3961e5844',
+    pubDate: '2026-05-06T00:00:00.000Z',
+    categories: ['Refactoring', 'Software Engineering', 'Best Practices'],
+    description: 'A comprehensive guide to modernising legacy codebases through reverse engineering, restructuring, and forward engineering techniques.',
+    thumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-4',
+    title: 'Apache Spark: A Modern Distributed System for Big Data Processing',
+    link: 'https://medium.com/@sanmugarasathaoogithan/apache-spark-a-modern-distributed-system-for-big-data-processing-21c3071049f6',
+    pubDate: '2026-03-27T00:00:00.000Z',
+    categories: ['Apache Spark', 'Big Data', 'Distributed Systems'],
+    description: 'Deep dive into Apache Spark architecture, RDDs, DataFrames, and how it powers large-scale data processing workloads.',
+    thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-5',
+    title: 'Caching in Spring Boot',
+    link: 'https://medium.com/@sanmugarasathaoogithan/caching-in-spring-boot-7b2784d7999a',
+    pubDate: '2025-12-17T00:00:00.000Z',
+    categories: ['Spring Boot', 'Java', 'Performance'],
+    description: 'How to leverage Spring Boot caching abstractions with @Cacheable, @CacheEvict, and providers like Redis to dramatically improve API performance.',
+    thumbnail: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-6',
+    title: 'Use of Static and This Keyword in Java',
+    link: 'https://medium.com/@sanmugarasathaoogithan/use-of-static-and-this-keyword-in-java-a11bb47be2ba',
+    pubDate: '2025-12-17T00:00:00.000Z',
+    categories: ['Java', 'OOP', 'Programming'],
+    description: 'A clear breakdown of how the static and this keywords work in Java, with practical examples and common gotchas.',
+    thumbnail: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-7',
+    title: 'Implementing Asgardeo IDP for Authentication in an E-Commerce Application',
+    link: 'https://medium.com/@sanmugarasathaoogithan/implementing-asgardeo-idp-for-authentication-in-an-e-commerce-application-1a26a255d35a',
+    pubDate: '2025-09-07T00:00:00.000Z',
+    categories: ['Authentication', 'Asgardeo', 'React'],
+    description: 'Step-by-step walkthrough of integrating Asgardeo as an identity provider into a React-based e-commerce application.',
+    thumbnail: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-8',
+    title: 'Software License',
+    link: 'https://medium.com/@sanmugarasathaoogithan/software-license-2479917ec196',
+    pubDate: '2024-06-26T00:00:00.000Z',
+    categories: ['Software', 'Licensing', 'Open Source'],
+    description: 'An overview of different software licence types — open source, proprietary, and everything in between — and how to choose the right one.',
+    thumbnail: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-9',
+    title: 'Stored Procedure in MySQL',
+    link: 'https://medium.com/@sanmugarasathaoogithan/stored-procedure-in-mysql-2f320b60bf11',
+    pubDate: '2024-02-26T00:00:00.000Z',
+    categories: ['MySQL', 'Database', 'SQL'],
+    description: 'Learn how to write, call, and manage stored procedures in MySQL to encapsulate business logic at the database layer.',
+    thumbnail: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    guid: 'article-10',
+    title: '5 Jobs Related to Databases',
+    link: 'https://medium.com/@sanmugarasathaoogithan/5-jobs-that-related-with-database-6e57e44f5303',
+    pubDate: '2023-12-31T00:00:00.000Z',
+    categories: ['Database', 'Career', 'Tech Jobs'],
+    description: 'Exploring five in-demand database-related career paths including DBA, data engineer, and data architect roles.',
+    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+  },
+];
 
 export const mediumProfileUrl = () =>
-  MEDIUM_USERNAME
-    ? `https://medium.com/@${MEDIUM_USERNAME}`
-    : 'https://medium.com';
+  `https://medium.com/@${MEDIUM_USERNAME}`;

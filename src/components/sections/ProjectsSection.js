@@ -32,11 +32,11 @@ const ProjectsSection = () => (
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent" />
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-semibold text-white">{project.name}</h3>
-            <p className="mt-2 text-sm leading-6 text-slate-300">{project.description}</p>
+            <h3 className="text-2xl font-semibold text-white">{project.name}</h3>
+            <p className="mt-2 text-base leading-6 text-slate-300">{project.description}</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {project.tech.map((tech) => (
-                <span key={tech} className="rounded-full border border-cyan-300/20 bg-slate-800/70 px-3 py-1 text-xs text-cyan-200">
+                <span key={tech} className="rounded-full border border-cyan-300/20 bg-slate-800/70 px-3 py-1 text-sm text-cyan-200">
                   {tech}
                 </span>
               ))}
@@ -46,7 +46,7 @@ const ProjectsSection = () => (
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-cyan-300/35 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:border-cyan-300/60"
+                className="inline-flex items-center gap-2 rounded-lg border border-cyan-300/35 px-4 py-2 text-base font-medium text-cyan-200 transition hover:border-cyan-300/60"
               >
                 <FiGithub /> GitHub
               </a>
@@ -54,7 +54,7 @@ const ProjectsSection = () => (
                 href={project.live}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-400 to-indigo-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-400 to-indigo-500 px-4 py-2 text-base font-semibold text-slate-950 transition hover:-translate-y-0.5"
               >
                 <FiExternalLink /> Live Demo
               </a>

@@ -3,7 +3,7 @@ export const siteConfig = {
   title: 'Sanmugarasa Thanoogithan | Full-Stack Developer & Spring Boot Specialist',
   description: 'Software Engineering undergraduate portfolio showcasing full-stack development, Spring Boot microservices, and modern web applications.',
   url: 'https://thanoogithan.com',
-  email: 'thanoogithan.dev@gmail.com',
+  email: 'sanmugarasathaoogithan@gmail.com',
   github: 'https://github.com/thanoo120',
   linkedin: 'https://www.linkedin.com/in/sanmugarasa-thanoogithan-923a70280/',
   author: 'Sanmugarasa Thanoogithan',

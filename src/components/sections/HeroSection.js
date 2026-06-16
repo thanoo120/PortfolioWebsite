@@ -21,13 +21,13 @@ const floatingTech = [
 const HeroSection = () => {
   return (
     <SectionWrapper id="home" className="relative overflow-hidden pt-32 lg:pt-36">
-      <div className="grid items-center gap-10 lg:grid-cols-2">
+      <div className="grid items-center gap-10 lg:gap-40 lg:grid-cols-2">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex rounded-full border border-cyan-300/40 bg-slate-900/70 px-4 py-1 text-sm text-cyan-300"
+            className="inline-flex rounded-full border border-cyan-300/40 bg-slate-900/70 px-4 py-1 text-base text-cyan-300"
           >
             Available for software engineering opportunities
           </motion.p>
@@ -35,7 +35,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-6 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl"
+            className="mt-6 text-5xl font-black leading-tight text-white sm:text-6xl lg:text-7xl"
           >
             {portfolioOwner.name}
           </motion.h1>
@@ -43,7 +43,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-3 text-xl font-semibold text-cyan-300 sm:text-2xl"
+            className="mt-3 text-2xl font-semibold text-cyan-300 sm:text-3xl"
           >
             <TypingEffect words={heroRoles} />
           </motion.h2>
@@ -51,7 +51,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg"
+            className="mt-6 max-w-2xl text-lg leading-7 text-slate-300 sm:text-xl"
           >
             {portfolioOwner.about}
           </motion.p>
@@ -66,7 +66,7 @@ const HeroSection = () => {
               href={portfolioOwner.resumeUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 px-5 py-3 text-base font-semibold text-slate-950 transition hover:-translate-y-0.5"
             >
               <FiDownload /> Download Resume
             </a>
@@ -75,7 +75,7 @@ const HeroSection = () => {
               smooth
               duration={550}
               offset={-80}
-              className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-cyan-300/35 bg-slate-900/60 px-5 py-3 text-sm font-semibold text-cyan-200 transition hover:-translate-y-0.5 hover:border-cyan-300/60"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-cyan-300/35 bg-slate-900/60 px-5 py-3 text-base font-semibold text-cyan-200 transition hover:-translate-y-0.5 hover:border-cyan-300/60"
             >
               <FiSend /> View Projects
             </ScrollLink>
@@ -84,7 +84,7 @@ const HeroSection = () => {
               smooth
               duration={550}
               offset={-80}
-              className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-purple-300/35 bg-slate-900/60 px-5 py-3 text-sm font-semibold text-purple-200 transition hover:-translate-y-0.5 hover:border-purple-300/60"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-xl border border-purple-300/35 bg-slate-900/60 px-5 py-3 text-base font-semibold text-purple-200 transition hover:-translate-y-0.5 hover:border-purple-300/60"
             >
               <FiMail /> Contact Me
             </ScrollLink>
@@ -114,7 +114,7 @@ const HeroSection = () => {
               <img
                 src={profilePhoto}
                 alt="Sanmugarasa Thanoogithan"
-                className="h-72 w-full object-cover object-top sm:h-80"
+                className="h-[576px] w-full object-cover object-top sm:h-[640px]"
               />
             </div>
           </div>

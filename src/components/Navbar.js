@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
-import { FiGithub, FiLinkedin, FiMail, FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 import { Link as ScrollLink } from 'react-scroll';
+import { FiDownload } from 'react-icons/fi';
 import { navItems, portfolioOwner } from '../data/portfolioData';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const socialLinks = [
-    { href: portfolioOwner.github, icon: FiGithub, label: 'GitHub' },
-    { href: portfolioOwner.linkedin, icon: FiLinkedin, label: 'LinkedIn' },
-    { href: `mailto:${portfolioOwner.email}`, icon: FiMail, label: 'Email' },
-  ];
 
   return (
     <>
@@ -35,30 +31,21 @@ const Navbar = () => {
                 offset={-90}
                 duration={500}
                 activeClass="text-cyan-300 border-cyan-300/50 bg-slate-800/70"
-                className="rounded-xl border border-transparent px-3 py-2 text-sm font-medium text-slate-300 transition hover:border-cyan-400/20 hover:bg-slate-800/60 hover:text-cyan-300"
+                className="rounded-xl border border-transparent px-3 py-2 text-2xl font-medium text-slate-300 transition hover:border-cyan-400/20 hover:bg-slate-800/60 hover:text-cyan-300"
               >
                 {item.label}
               </ScrollLink>
             ))}
           </div>
 
-          <div className="hidden items-center gap-2 md:flex">
-            {socialLinks.map((item) => {
-              const Icon = item.icon;
-              return (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-lg border border-cyan-300/20 bg-slate-900/50 p-2.5 text-slate-300 transition hover:-translate-y-0.5 hover:border-cyan-300/50 hover:text-cyan-300"
-                  aria-label={item.label}
-                >
-                  <Icon size={17} />
-                </a>
-              );
-            })}
-          </div>
+          <a
+            href={portfolioOwner.resumeUrl}
+            download
+            className="hidden items-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-300 transition hover:bg-cyan-500/20 hover:border-cyan-400/70 md:flex"
+          >
+            <FiDownload size={16} />
+            Resume
+          </a>
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -89,22 +76,14 @@ const Navbar = () => {
                   {item.label}
                 </ScrollLink>
               ))}
-              <div className="mt-6 flex gap-3 border-t border-cyan-300/20 pt-6">
-                {socialLinks.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-lg border border-cyan-300/20 bg-slate-900/50 p-2.5 text-slate-300 transition hover:border-cyan-300/50 hover:text-cyan-300"
-                    >
-                      <Icon size={18} />
-                    </a>
-                  );
-                })}
-              </div>
+              <a
+                href={portfolioOwner.resumeUrl}
+                download
+                className="mt-4 flex items-center justify-center gap-2 rounded-xl border border-cyan-400/40 bg-cyan-500/10 px-4 py-3 text-base font-semibold text-cyan-300 transition hover:bg-cyan-500/20 hover:border-cyan-400/70"
+              >
+                <FiDownload size={18} />
+                Download Resume
+              </a>
             </div>
           </div>
         </div>

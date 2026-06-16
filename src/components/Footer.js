@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="relative z-10 mt-16 border-t border-cyan-300/20">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-slate-400 sm:px-8 md:flex-row lg:px-16">
-        <p>
+        <p className="text-base">
           &copy; {year} <span className="font-semibold text-cyan-300">{portfolioOwner.name}</span>. All rights reserved.
         </p>
         <div className="flex items-center gap-3">
@@ -33,7 +33,7 @@ const Footer = () => {
             );
           })}
         </div>
-        <p className="text-slate-500">Built with React, Tailwind CSS, and Framer Motion.</p>
+        <p className="text-base text-slate-500">Built with React, Tailwind CSS, and Framer Motion.</p>
       </div>
     </footer>
   );

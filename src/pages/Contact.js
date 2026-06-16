@@ -44,14 +44,14 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: 'bi-envelope', label: 'Email', value: 'thanoo@gmail.com', link: 'mailto:thanoo@gmail.com' },
+    { icon: 'bi-envelope', label: 'Email', value: 'sanmugarasathaoogitha@gmail.com', link: 'mailto:sanmugarasathaoogithan@gmail.com' },
     { icon: 'bi-phone', label: 'Phone', value: '0768946042', link: 'tel:0768946042' },
     { icon: 'bi-house', label: 'Address', value: 'NO.20, Urelu west, Chunnakam, Jaffna.', link: null },
   ];
 
   const socialLinks = [
     { href: 'https://www.linkedin.com/in/sanmugarasa-thanoogithan-923a70280/', icon: 'bi-linkedin', name: 'LinkedIn' },
-    { href: 'https://github.com/', icon: 'bi-github', name: 'GitHub' },
+    { href: 'https://github.com/thanoo120', icon: 'bi-github', name: 'GitHub' },
     { href: 'https://www.instagram.com/', icon: 'bi-instagram', name: 'Instagram' },
     { href: 'https://www.facebook.com/?ref=homescreenpwa', icon: 'bi-facebook', name: 'Facebook' },
   ];
@@ -64,8 +64,8 @@ const Contact = () => {
           <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full border border-primary/20 mb-6">
             <span className="text-primary text-sm font-medium">Get In Touch</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black gradient-text mb-6">Let's Work Together</h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black gradient-text mb-6">Let's Work Together</h1>
+          <p className="text-xl sm:text-2xl text-gray-300 max-w-2xl">
             Have a project in mind? I'd love to hear about it. Let's create something amazing together.
           </p>
         </div>
@@ -74,7 +74,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-6 animate-slide-left">
             <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20">
-              <h2 className="text-2xl font-bold gradient-text mb-8">Contact Information</h2>
+              <h2 className="text-3xl font-bold gradient-text mb-8">Contact Information</h2>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start gap-4 group">
@@ -82,13 +82,13 @@ const Contact = () => {
                       <i className={`bi ${info.icon} text-primary text-xl`}></i>
                     </div>
                     <div className="flex-1">
-                      <p className="text-gray-400 text-sm mb-1">{info.label}</p>
+                      <p className="text-gray-400 text-base mb-1">{info.label}</p>
                       {info.link ? (
-                        <a href={info.link} className="text-white text-base sm:text-lg font-semibold group-hover:text-primary transition-colors">
+                        <a href={info.link} className="text-white text-lg sm:text-xl font-semibold group-hover:text-primary transition-colors">
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-white text-base sm:text-lg font-semibold">{info.value}</p>
+                        <p className="text-white text-lg sm:text-xl font-semibold">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -98,7 +98,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20">
-              <h2 className="text-2xl font-bold gradient-text mb-6">Follow Me</h2>
+              <h2 className="text-3xl font-bold gradient-text mb-6">Follow Me</h2>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -109,7 +109,7 @@ const Contact = () => {
                     className="group flex items-center gap-3 px-4 py-3 glass rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105"
                   >
                     <i className={`bi ${social.icon} text-primary text-xl`}></i>
-                    <span className="text-white font-medium group-hover:text-primary transition-colors">{social.name}</span>
+                    <span className="text-white text-lg font-medium group-hover:text-primary transition-colors">{social.name}</span>
                   </a>
                 ))}
               </div>
@@ -119,7 +119,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="animate-slide-right">
             <div className="glass rounded-2xl p-6 sm:p-8 border border-primary/20">
-              <h2 className="text-2xl font-bold gradient-text mb-8">Send a Message</h2>
+              <h2 className="text-3xl font-bold gradient-text mb-8">Send a Message</h2>
               <form
                 id="contactForm"
                 action="https://formspree.io/f/xjkyalog"
@@ -128,7 +128,7 @@ const Contact = () => {
                 className="space-y-6"
               >
                 <div className="space-y-2">
-                  <label className="block text-primary font-semibold text-sm">
+                  <label className="block text-primary font-semibold text-base">
                     <i className="bi bi-person mr-2"></i>Name
                   </label>
                   <input
@@ -144,7 +144,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block text-primary font-semibold text-sm">
+                  <label className="block text-primary font-semibold text-base">
                     <i className="bi bi-envelope mr-2"></i>Email
                   </label>
                   <input
@@ -160,7 +160,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block text-primary font-semibold text-sm">
+                  <label className="block text-primary font-semibold text-base">
                     <i className="bi bi-chat-left-text mr-2"></i>Message
                   </label>
                   <textarea

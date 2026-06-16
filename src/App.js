@@ -7,8 +7,8 @@ import AboutSection from './components/sections/AboutSection';
 import SkillsSection from './components/sections/SkillsSection';
 import ExperienceSection from './components/sections/ExperienceSection';
 import ProjectsSection from './components/sections/ProjectsSection';
-import GithubSection from './components/sections/GithubSection';
-import AchievementsSection from './components/sections/AchievementsSection';
+import MediumSection from './components/sections/MediumSection';
+import TechMarquee from './components/sections/TechMarquee';
 import ContactSection from './components/sections/ContactSection';
 import Footer from './components/Footer';
 
@@ -26,10 +26,10 @@ function App() {
           <HeroSection />
           <AboutSection />
           <SkillsSection />
+          <TechMarquee />
           <ExperienceSection />
           <ProjectsSection />
-          <GithubSection />
-          <AchievementsSection />
+          <MediumSection />
           <ContactSection />
         </motion.main>
         <Footer />

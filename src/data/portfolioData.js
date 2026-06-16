@@ -26,7 +26,7 @@ export const portfolioOwner = {
   role: 'Software Engineering Undergraduate | Full-Stack Developer | Spring Boot Enthusiast',
   about:
     'Software Engineering undergraduate with hands-on industry experience in Spring Boot microservices and full-stack development. Passionate about building scalable web applications, REST APIs, and modern software systems using Java, React, and cloud technologies.',
-  email: 'thanoogithan.dev@gmail.com',
+  email: 'sanmugarasathaoogithan@gmail.com',
   github: 'https://github.com/thanoo120',
   linkedin: 'https://www.linkedin.com/in/sanmugarasa-thanoogithan-923a70280/',
   resumeUrl: '/ThanooCV.pdf',
@@ -38,12 +38,11 @@ export const navItems = [
   { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
-  { id: 'github', label: 'GitHub' },
-  { id: 'achievements', label: 'Achievements' },
+  { id: 'articles', label: 'Articles' },
   { id: 'contact', label: 'Contact' },
 ];
 
-export const heroRoles = ['Full-Stack Developer', 'Spring Boot Developer', 'Backend Enthusiast'];
+export const heroRoles = ['Full-Stack Software Engineer', 'Spring Boot Developer', 'React Developer'];
 
 export const skillsByCategory = [
   {
@@ -100,13 +99,13 @@ export const timeline = [
     summary: 'Focused on software architecture, distributed systems, and enterprise web development.',
   },
   {
-    period: '2024 - 2025',
+    period: '2025 November - 2026 May',
     title: 'Software Engineering Intern',
     company: 'Codelantic',
     summary: 'Built Spring Boot microservices, developed production APIs, and collaborated through Agile sprints.',
   },
   {
-    period: '2025 - Present',
+    period: '2024 - Present',
     title: 'Freelance Full-Stack Developer',
     company: 'Self-employed',
     summary: 'Delivered full-stack solutions with React frontends, backend APIs, and production-ready deployment workflows.',
@@ -114,10 +113,10 @@ export const timeline = [
 ];
 
 export const experienceHighlights = [
-  'Backend API development for scalable services',
-  'Spring Boot microservices implementation',
-  'Agile workflow and sprint collaboration',
-  'Git-based team collaboration and code reviews',
+  'End-to-end full-stack development — React frontends to Spring Boot backends',
+  'Microservices architecture with REST APIs, JWT auth, and Docker deployment',
+  'Agile sprint delivery with real production impact at Codelantic',
+  'Clean code advocate — SOLID principles, code reviews, and CI/CD pipelines',
 ];
 
 export const education = [
