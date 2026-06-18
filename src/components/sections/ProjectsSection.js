@@ -50,14 +50,12 @@ const ProjectsSection = () => (
               >
                 <FiGithub /> GitHub
               </a>
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-400 to-indigo-500 px-4 py-2 text-base font-semibold text-slate-950 transition hover:-translate-y-0.5"
+              <button
+                onClick={() => alert('Demo video not updated yet.')}
+                className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-400 to-indigo-500 px-4 py-2 text-base font-semibold text-slate-950 transition hover:-translate-y-0.5 cursor-pointer"
               >
                 <FiExternalLink /> Live Demo
-              </a>
+              </button>
             </div>
           </div>
         </motion.article>
